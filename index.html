@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Créer un site e-commerce</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" />
+</head>
+<body>
+
+  <!-- Barre de navigation -->
+  
+  <nav>
+    <div class="logo">
+      <img src="images/logo.png" width="125px">
+    </div>
+      <div class="onglets">
+      <p class="link"><a href="nouveautés.html">Nouveautés</a></p>
+      <p class="link"><a href="boards.html">Boards</a></p>
+      <p class="link"><a href="nous_contacter.html">Nous Contacter</a></p>
+
+      <form>
+        <input type="search" placeholder="Rechercher">
+      </form>
+      
+      <a href="likés.html"><button> <p><i class="far fa-heart"></i></p></button></a>
+      <a href="panier.html"><button> <p><i class="fas fa-shopping-cart"></i></p></button></a>
+
+    <a href="#" class="bg-grey">
+      <img src="/images/moon-icon.png" id="icon" class="dark-bg theme-icon"></img>
+    </a>
+
+    </div>
+  </nav>
+  <!-- Fin de la barre de navigation -->
+  
+  <!-- Header -->
+   <header>
+     <h1>C'est votre boutique, pour rider en toute sécurité.</h1>
+     <a href="naviguer.html"><button>Naviguer <i class="fas fa-paper-plane"></i></button> </a>
+   </header>
+  <!-- Fin du header -->
+  
+  <!-- Section principale -->
+  <section class="main">
+    
+    <!-- Toutes les cartes -->
+    
+    <div class="cards">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="images/DINO BOARD.png" alt="Avatar" style="width:300px;height:300px;">
+          </div>
+          <div class="flip-card-back">
+            <h1>LA DINO BOARD</h1> 
+            <p>EST PARFAITE</p> 
+            <p>195$</p>
+          </div>
+        </div>
+      </div>
+
+
+
+
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/hotwheels final.jpg" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+              <h1>LA HOT BOARD</h1>
+              <p>pour rouler super vite</p>
+              <p>100$</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/bob l'éponge.jpg" style="width:300px;height:300px;" >
+            </div>
+            <div class="flip-card-back">
+              <h1>Sponge board</h1>
+              <p>Afin de rouler sous l'eau</p>
+              <p>800$</p>
+            </div>
+          </div>
+        </div>
+    <!-- Fin de toutes les cartes -->
+    
+    <!-- Video de presentation -->
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/7gms2OFRzSM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+    <!-- Fin de la video de presentation -->
+  </section>
+  <!-- Fin de la section principale -->
+  
+  <!-- Pied de page -->
+  <footer>
+    <p>&copy; Contactez-nous au 06 00 00 00 00</p>
+      <div class="social-media">
+        <button><a href="https://twitter.com/TwitterFrance?s=20" class="twitter" target="_blank"><p><i class="fab fa-twitter"></i></p></a></button>
+        <button><a href="https://instagram.com" class="instagram" target="_blank"><p><c class="fab fa-instagram"></i></p></a></button>
+      </div>
+  </footer>
+  <!-- Fin du pied de page -->
+
+  <script>
+    var icon = document.getElementById("icon");
+
+
+    if (localStorage.getItem("theme") == null) {
+        localStorage.setItem("theme", "dark");
+    }
+
+
+    let localData = localStorage.getItem("theme");
+
+    if (localData == "dark") {
+        icon.src = "/images/sun-icon.png"
+        document.body.classList.remove("light-theme");
+    } else if (localData == "light") {
+        icon.src = "/images/moon-icon.png"
+        document.body.classList.add("light-theme");
+    }
+
+    icon.onclick = function () {
+        document.body.classList.toggle("light-theme");
+        if (document.body.classList.contains("light-theme")) {
+            icon.src = "/images/moon-icon.png";
+            localStorage.setItem("theme", "light");
+        } else {
+            icon.src = "/images/sun-icon.png";
+            localStorage.setItem("theme", "dark");
+        }
+    }
+  </script>
+</body>
+</html>

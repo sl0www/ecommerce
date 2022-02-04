@@ -1,0 +1,310 @@
+:root {
+  --bg-color: #242935;
+  --blue: #5780F7 !important;
+  --muted: #747985;
+  --grey: #3D4352;
+  --white: #FFF;
+  --box-bg: #2C3041;
+  --dark-grey: #2c3346;
+
+}
+
+.light-theme {
+  --bg-color: #F0EEF4;
+  --white: #000;
+  --muted: #616672;
+  --box-bg: #fff;
+  --grey: #5780F7;
+  --dark-grey: #686f83;
+
+}
+.dark-bg {
+  background-color: var(--dark-grey);
+}
+
+.box-bg {
+  background-color: var(--box-bg);
+}
+
+.bg-blue {
+  background-color: var(--blue);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.bg-grey {
+  background-color: var(--grey) !important;
+}
+
+.color {
+  color: var(--white);
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.bolder {
+  font-weight: bolder;
+}
+.theme-icon {
+  border-radius: 20px;
+  padding: 25px;
+  position: absolute;
+  top: 50px;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+body{
+  margin:0px;
+  padding: 0px;
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--box-bg);
+}
+a:link {
+  color: #000000;
+  text-decoration: none;
+  font-weight: normal;
+  font-style: normal;
+}
+a:visited {
+  color: #000000;
+  text-decoration: none;
+  background-color: #000000;
+  font-weight: normal;
+  font-style: italic;
+}
+a:hover {
+  color: black;
+  text-decoration: none;
+  background-color: none;
+  font-weight: none;
+  font-style: normal;
+}
+a:active {
+  color: none;
+  text-decoration: none;
+  background-color: #CCCCCC;
+  font-weight: bold;
+  font-style: normal;
+}
+/* Barre de navigation */
+nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--box-bg);
+}
+nav .onglets{
+  display: flex;
+  flex-wrap:wrap;
+
+}
+nav .onglets p{
+  font-size: 17px;
+  margin-right: 10px;
+  cursor:pointer;
+
+}
+nav .onglets input{
+  margin: 8px 20px;
+  padding: 15px;
+  border-radius: 30px;
+  border:none;
+  background-color: #f2f2f2;
+  outline:none;
+  background-color: var(--box-bg);
+
+}
+nav .onglets button{
+  background-color: #fff;
+  border: none;
+  background-color: var(--box-bg);
+}
+.i{
+  color: var(--white);
+}
+/* Fin de la barre de navigation */
+
+/* Header */
+header{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  background-color: var(--box-bg);
+}
+header h1{
+  font-size: 30px;
+  max-width: 500px;
+  text-align:center;
+  color: var(--white);
+}
+header button{
+  padding: 15px 20px;
+  font-size: 20px;
+  width: 150px;
+  background-color: #fff;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+/* Fin du header */
+
+/* Section principale */
+.flip-card {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: transparent;
+  margin-right: 20px;
+  cursor: pointer;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  transform: rotateY(180deg);
+}
+.main{
+  margin: 20px;
+  margin-top: 80px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+/* Toutes les cartes */
+.cards{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+.cards .cards{
+  margin-right: 20px;
+  cursor:pointer;
+  justify-content: center;
+}
+.cards .cards img{
+  width: 350px;
+}
+.cards .cards .cards-header{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+.cards .cards .cards-body p{
+  margin-top: -10px;
+}
+/* Fin de toutes les cartes */
+
+/* Video de présentation */
+.main .video{
+  margin-top: 200px;
+  width: 100%;
+}
+.main .video iframe{
+  border:none;
+  border-radius: 10px;
+  width: 100%;
+  height: 400px;
+}
+/* Fin de la vidéo de présentation */
+/* Fin de la section principale */
+
+/* Pied de page */
+footer {
+  margin-top: 100px;
+  background-color: #000;
+  padding: 30px;
+  color: #fff;
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  background-color: var(--white);
+}
+footer .social-media{
+  display: flex;
+}
+footer .social-media p{
+  margin-right: 15px;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  padding: 5px;
+  text-align:center;
+  width: 20px;
+  cursor:pointer;
+  background-color: white;
+}
+
+footer .social-media button{
+  background-color: rgb(0, 0, 0);
+  border: none;
+  fill: 7e7e7e;
+}
+footer i {
+  color:black
+}
+footer c   {
+  color: black;
+}
+i:focus{color: 212121;}
+
+
+/* Fin du pied de page */
+
+@media screen and (max-width: 640px){
+  nav .onglets .link, nav h1{
+    display:none;
+  }
+  .cards .card img{
+    width: 300px;
+  }
+}
